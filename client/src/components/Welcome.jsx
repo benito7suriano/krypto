@@ -21,6 +21,7 @@ const Input = ({ placeholder, name, type, value, handleChange }) => (
 
 const Welcome = () => {
   const connectWallet = () => {}
+  const handleSubmit = () => {}
   return (
     <div className='flex w-full justify-center items-center'>
       <div className='flex md:flex-row flex-col items-start justify-between md:p-20 py-12 px-4'>
@@ -92,7 +93,13 @@ const Welcome = () => {
             handleChange={() => {}}
           />
           <div className='h-[1px] w-full bg-gray-400 my-2' />
-          {true ? <Loader /> : <div></div>}
+          {false ? <Loader /> : <div></div>}
+          <button
+            type='button'
+            onClick={handleSubmit}
+            className='text-white w-full mt-2 border-[1px] p-2 border-[#3d4f7c] rounded-full cursor-pointer'>
+            Send Now
+          </button>
         </div>
       </div>
     </div>
