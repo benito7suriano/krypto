@@ -8,6 +8,17 @@ import { Loader } from './'
 const commonStyles =
   'min-h-[70px] sm:px-0 px-2 sm:min-w-[120px] flex justify-center items-center border-[0.5px] border-gray-400 text-sm font-light text-white'
 
+const Input = ({ placeholder, name, type, value, handleChange }) => (
+  <input
+    type={type}
+    placeholder={placeholder}
+    step='0.0001'
+    value={value}
+    onChange={(e) => handleChange(e, name)}
+    className='my-2 w-full rounded-sm p-2 outline-none bg-transparent text-white border-none text-sm white-glassmorphism'
+  />
+)
+
 const Welcome = () => {
   const connectWallet = () => {}
   return (
@@ -53,6 +64,15 @@ const Welcome = () => {
               <p className='text-white font-semibold text-lg mt-1'>Ethereum</p>
             </div>
           </div>
+        </div>
+
+        <div className='p-5 sm:w-96 w-full flex flex-col justify-start items-center blue-glassmorphism'>
+          <Input
+            placeholder={'Address To'}
+            name='addressTo'
+            type='text'
+            handleChange={() => {}}
+          />
         </div>
       </div>
     </div>
