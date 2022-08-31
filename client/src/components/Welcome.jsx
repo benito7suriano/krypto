@@ -82,7 +82,7 @@ const Welcome = () => {
             </div>
             <div>
               <p className='text-white font-light text-sm'>
-                0xasdlfkw...adsfjkldf
+                {`${currentAccount.slice(0, 5)}...${currentAccount.slice(-4)}`}
               </p>
               <p className='text-white font-semibold text-lg mt-1'>Ethereum</p>
             </div>
