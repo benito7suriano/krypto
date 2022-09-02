@@ -101,7 +101,7 @@ const Welcome = () => {
           </div>
         </div>
         {/* form */}
-        <div className='p-5 sm:w-96 w-full flex flex-col justify-start items-center blue-glassmorphism'>
+        <div className='p-5 w-96 md:w-full flex flex-col justify-start items-center blue-glassmorphism'>
           <Input
             placeholder={'Address To'}
             name='addressTo'
