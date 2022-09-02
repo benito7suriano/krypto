@@ -43,7 +43,17 @@ export const TransactionProvider = ({ children }) => {
 
     const availableTransactions = await transactionContract.getAllTransactions()
 
-    console.log(availableTransactions)
+    const structuredTransactions = availableTransactions.map((transaction) => ({
+      addressTo: transaction.receiver,
+      addressFrom: transaction.sender,
+      timestamp: new Date(
+        transaction.timestamp.toNumber() * 1000,
+      ).toLocaleString(),
+      message: transaction.message,
+      keyword: transaction.keyword,
+      amount: parseInt(transaction.amount._hex) / 10 ** 18,
+    }))
+    console.log(structuredTransactions)
   }
 
   // checking if there's an account connected
