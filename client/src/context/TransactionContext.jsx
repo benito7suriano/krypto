@@ -32,6 +32,7 @@ export const TransactionProvider = ({ children }) => {
   const [transactionCount, setTransactionCount] = useState(
     localStorage.getItem('transactionCount'),
   )
+  const [transactions, setTransactions] = useState([])
 
   const handleChange = (e, name) => {
     setFormData((prevState) => ({ ...prevState, [name]: e.target.value }))
@@ -53,7 +54,7 @@ export const TransactionProvider = ({ children }) => {
       keyword: transaction.keyword,
       amount: parseInt(transaction.amount._hex) / 10 ** 18,
     }))
-    console.log(structuredTransactions)
+    setTransactions(structuredTransactions)
   }
 
   // checking if there's an account connected
@@ -158,6 +159,7 @@ export const TransactionProvider = ({ children }) => {
         setFormData,
         handleChange,
         sendTransaction,
+        transactions,
       }}>
       {children}
     </TransactionContext.Provider>

@@ -30,6 +30,7 @@ const Welcome = () => {
     setFormData,
     sendTransaction,
     handleChange,
+    transactions,
   } = useContext(TransactionContext)
 
   const handleSubmit = (e) => {
