@@ -160,6 +160,7 @@ export const TransactionProvider = ({ children }) => {
         handleChange,
         sendTransaction,
         transactions,
+        isLoading,
       }}>
       {children}
     </TransactionContext.Provider>
