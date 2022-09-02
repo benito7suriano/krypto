@@ -15,6 +15,7 @@ const Navbar = () => {
       <div className='md:flex-[0.5] flex-initial justify-center items-center'>
         <img src={logo} alt='logo' className='w-32 cursor-pointer' />
       </div>
+      {/* navbar items when medium screen or larger */}
       <ul className='text-white md:flex hidden list-none flex-row justify-between items-center flex-initial'>
         {['Market', 'Exchange', 'Tutorials', 'Wallets'].map((item, index) => (
           <NavbarItem key={item + index} title={item} />
@@ -37,6 +38,7 @@ const Navbar = () => {
             onClick={() => setToggleMenu(!toggleMenu)}
           />
         )}
+        {/* navbar links on a small screen */}
         {toggleMenu && (
           <ul className='z-10 fixed top-0 -right-2 p-3 w-[70vw] h-screen shadow-2xl md:hidden list-none flex flex-col justify-start items-end rounded-md blue-glassmorphism text-white animate-slide-in'>
             <li className='text-xl w-full my-2'>

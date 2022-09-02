@@ -45,16 +45,21 @@ const Welcome = () => {
   }
 
   return (
-    <div className='flex w-full justify-center items-center'>
+    // main welcome section
+    <div className='flex flex-col md:flex-row w-full justify-center items-center'>
+      {/* title, subtitle and benefits */}
       <div className='flex mf:flex-row flex-col items-start justify-between md:p-20 py-12 px-4'>
-        <div className='flex flex-1 justify-start flex-col mf:mr-10'>
+        <div className='flex flex-1 justify-start items-start flex-col mf:mr-10'>
+          {/* title */}
           <h1 className='text-3xl sm:text-5xl text-white text-gradient py-1'>
             Send Crypto <br /> across the world
           </h1>
+          {/* subtitle */}
           <p className='text-left mt-5 text-white font-light md:w-9/12 w-11/12 text-base'>
             Explore the crypto world. Buy and sell cryptocurrencies easily on
             Krypto.
           </p>
+          {/* connect wallet button */}
           {!currentAccount && (
             <button
               type='button'
@@ -65,6 +70,7 @@ const Welcome = () => {
               </p>
             </button>
           )}
+          {/* benefits grid */}
           <div className='grid sm:grid-cols-3 grid-cols-2 w-full mt-10'>
             <div className={`rounded-tl-2xl ${commonStyles}`}>Reliability</div>
             <div className={`${commonStyles}`}>Security</div>
@@ -75,8 +81,10 @@ const Welcome = () => {
           </div>
         </div>
       </div>
+      {/* card and transaction form */}
       <div className='flex flex-col flex-1 items-center justify-start w-full mf:mt-0 mt-10'>
-        <div className='p-3 justify-end items-start flex-col rounded-xl h-40 sm:w-72 w-full my-5 eth-card white-glassmorphism'>
+        {/* card */}
+        <div className='p-3 flex justify-end items-start flex-col rounded-xl h-40 w-72  my-5 eth-card .white-glassmorphism'>
           <div className='flex justify-between flex-col w-full h-full'>
             <div className='flex justify-between items-start'>
               <div className='w-10 h-10 rounded-full border-2 border-white flex justify-center items-center'>
@@ -92,7 +100,7 @@ const Welcome = () => {
             </div>
           </div>
         </div>
-
+        {/* form */}
         <div className='p-5 sm:w-96 w-full flex flex-col justify-start items-center blue-glassmorphism'>
           <Input
             placeholder={'Address To'}

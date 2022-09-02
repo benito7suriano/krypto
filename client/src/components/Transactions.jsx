@@ -1,7 +1,6 @@
 import React, { useContext } from 'react'
 import { TransactionContext } from '../context/TransactionContext'
 
-import dummyData from '../utils/dummyData'
 import { shortenAddress } from '../utils/shortenAdress'
 import useFetch from '../hooks/useFetch'
 
@@ -57,6 +56,7 @@ const TransactionCard = ({
   )
 }
 
+// TODO: make new transactions appear without window.reload'ing
 const Transactions = () => {
   const { currentAccount, transactions } = useContext(TransactionContext)
   return (
