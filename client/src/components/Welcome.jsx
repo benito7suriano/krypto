@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import { AiFillPlayCircle } from 'react-icons/ai'
 import { SiEthereum } from 'react-icons/si'
 import { BsInfoCircle } from 'react-icons/bs'
@@ -106,24 +106,28 @@ const Welcome = () => {
             placeholder={'Address To'}
             name='addressTo'
             type='text'
+            value={formData.addressTo}
             handleChange={handleChange}
           />
           <Input
             placeholder={'Amount (ETH)'}
             name='amount'
             type='number'
+            value={formData.amount}
             handleChange={handleChange}
           />
           <Input
             placeholder={'Keyword (Gif)'}
             name='keyword'
             type='text'
+            value={formData.keyword}
             handleChange={handleChange}
           />
           <Input
             placeholder={'Enter Message'}
             name='message'
             type='text'
+            value={formData.message}
             handleChange={handleChange}
           />
           <div className='h-[1px] w-full bg-gray-400 my-2' />
