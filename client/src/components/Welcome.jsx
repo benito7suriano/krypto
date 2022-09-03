@@ -84,7 +84,7 @@ const Welcome = () => {
       {/* card and transaction form */}
       <div className='flex flex-col flex-1 items-center justify-start w-full mf:mt-0 mt-10'>
         {/* card */}
-        <div className='p-3 flex justify-end items-start flex-col rounded-xl h-40 w-72  my-5 eth-card .white-glassmorphism'>
+        <div className='p-3 flex justify-end items-start flex-col rounded-xl h-40 w-72 my-5 eth-card .white-glassmorphism'>
           <div className='flex justify-between flex-col w-full h-full'>
             <div className='flex justify-between items-start'>
               <div className='w-10 h-10 rounded-full border-2 border-white flex justify-center items-center'>
@@ -101,7 +101,7 @@ const Welcome = () => {
           </div>
         </div>
         {/* form */}
-        <div className='p-5 w-96 md:w-full flex flex-col justify-start items-center blue-glassmorphism'>
+        <div className='p-5 sm:w-96 w-96 flex flex-col justify-start items-center blue-glassmorphism'>
           <Input
             placeholder={'Address To'}
             name='addressTo'

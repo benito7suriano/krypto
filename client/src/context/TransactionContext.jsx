@@ -136,8 +136,9 @@ export const TransactionProvider = ({ children }) => {
       console.log(`Success - ${transactionHash.hash}`)
 
       const transactionCount = await transactionContract.getTransactionCount()
-
       setTransactionCount(transactionCount.toNumber())
+
+      getAllTransactions()
     } catch (error) {
       console.error(error)
       throw new Error('No ethereum object.')
